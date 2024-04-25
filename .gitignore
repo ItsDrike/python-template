@@ -1,0 +1,39 @@
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+
+# Python packaging files
+dist/
+
+# Pytest coverage reports
+htmlcov/
+.coverage*
+coverage.xml
+
+# Sphinx documentation
+docs/_build/
+
+# Pyenv local version information
+.python-version
+
+# Editor generated files
+.idea/
+.vscode/
+.spyproject/
+.spyderproject/
+.replit
+.neoconf.json
+
+# Auto-generated folder attributes for MacOS
+.DS_STORE
+
+# Environmental, backup and personal files
+.env
+*.bak
+TODO

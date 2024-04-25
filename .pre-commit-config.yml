@@ -1,0 +1,34 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-toml # For pyproject.toml
+      - id: check-yaml # For workflows, and this file
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        description: Run ruff linter
+        entry: poetry run ruff check --force-exclude
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+        args: [--fix, --exit-non-zero-on-fix]
+
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: ruff-format
+        description: Run ruff formatter
+        entry: poetry run ruff format
+        language: system
+        types_or: [python, pyi]
+        require_serial: true

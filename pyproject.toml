@@ -100,13 +100,11 @@ ignore = [
   "SIM102", # use a single if statement instead of nested if statements
   "SIM108", # Use ternary operator {contents} instead of if-else-block
 
-  "B008", # Do not perform function call in argument defaults (for fastapi.Depends)
   "B904", # Raise without `from` within an `except` clause
 
   "PLR2004", # Using unnamed numerical constants
   "PGH003",  # Using specific rule codes in type ignores
   "E731",    # Don't asign a lambda expression, use a def
-  "S101",    # Use of `assert` detected
   "S311",    # Use `secrets` for random number generation, not `random`
 
   # Redundant rules with ruff-format:

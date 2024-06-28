@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["ItsDrike <itsdrike@protonmail.com>"]
 readme = "README.md"
+license = "GPL-3.0-or-later"
 packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
@@ -32,41 +33,19 @@ target-version = "py311"
 line-length = 119
 
 [tool.ruff.lint]
-select = [
-  "F",     # Pyflakes
-  "W",     # Pycodestyle (warnigns)
-  "E",     # Pycodestyle (errors)
-  "N",     # pep8-naming
-  "I",     # isort
-  "D",     # pydocstyle
-  "DJ",    # flake8-django
-  "DTZ",   # flake8-datetimez
-  "YTT",   # flake8-2020
-  "ANN",   # flake8-annotations
-  "ASYNC", # flake8-async
-  "S",     # flake8-bandit
-  "B",     # flake8-bugbear
-  "A",     # flake8-builtins
-  "C4",    # flake8-comprehensions
-  "FA",    # flake8-future-annotations
-  "T20",   # flake8-print
-  "PT",    # flake8-pytest-style
-  "Q",     # flake8-quotes
-  "RSE",   # flake8-raise
-  "RET",   # flake8-return
-  "SIM",   # flake8-simplify
-  "TID",   # flake8-tidy-imports
-  "INT",   # flake8-gettext
-  "ISC",   # flake8-implicit-str-concat
-  "PTH",   # flake8-use-pathlib
-  "PGH",   # pygrep-hooks
-  "PIE",   # flake8-pie
-  "PL",    # pylint
-  "RUF",   # ruff-specific rules
-  "UP",    # pyupgrade
-]
+select = ["ALL"]
 
 ignore = [
+  "C90", # mccabe
+  "FBT", # flake8-boolean-trap
+  "CPY", # flake8-copyright
+  "EM",  # flake8-errmsg
+  "SLF", # flake8-self
+  "TCH", # flake8-type-checking
+  "ARG", # flake8-unused-arguments
+  "TD",  # flake8-todos
+  "FIX", # flake8-fixme
+
   "D100", # Missing docstring in public module
   "D104", # Missing docstring in public package
   "D105", # Missing docstring in magic method

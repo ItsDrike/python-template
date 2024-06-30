@@ -32,3 +32,13 @@ repos:
         language: system
         types_or: [python, pyi]
         require_serial: true
+
+  - repo: local
+    hooks:
+      - id: pyright
+        name: Pyright
+        description: Run pyright type checker
+        entry: poetry run pyright
+        language: system
+        types: [python]
+        pass_filenames: false # pyright runs for the entire project, it can't run for single files

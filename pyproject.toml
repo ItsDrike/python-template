@@ -42,7 +42,6 @@ ignore = [
   "CPY", # flake8-copyright
   "EM",  # flake8-errmsg
   "SLF", # flake8-self
-  "TCH", # flake8-type-checking
   "ARG", # flake8-unused-arguments
   "TD",  # flake8-todos
   "FIX", # flake8-fixme

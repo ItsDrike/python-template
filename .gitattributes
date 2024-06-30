@@ -1,2 +1,2 @@
-# (C'mon Windows, CRLF is not cool, it's just a waste of a byte)
+# (CRLF sucks, it's just a waste of a byte, Windows is stupid for using it)
 * text=auto eol=lf

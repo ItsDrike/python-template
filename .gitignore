@@ -2,13 +2,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Cache directories from various tools
 .pytest_cache/
 .mypy_cache/
 
 # Virtual environments
 .venv/
 
-# Python packaging files
+# Python packaging / distribution files
 dist/
 
 # Pytest coverage reports
@@ -19,7 +21,7 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-# Pyenv local version information
+# Local python version information (pyenv/rye)
 .python-version
 
 # Editor generated files
@@ -30,8 +32,14 @@ docs/_build/
 .replit
 .neoconf.json
 
-# Auto-generated folder attributes for MacOS
+# Folder attributes / configuration files on various platforms
 .DS_STORE
+[Dd]esktop.ini
+.directory
+
+# Trash directories
+.Trash-*
+$RECYCLE.BIN/
 
 # Environmental, backup and personal files
 .env

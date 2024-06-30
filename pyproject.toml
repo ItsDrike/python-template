@@ -85,6 +85,7 @@ ignore = [
   "PGH003",  # Using specific rule codes in type ignores
   "E731",    # Don't asign a lambda expression, use a def
   "S311",    # Use `secrets` for random number generation, not `random`
+  "TRY003",  # Avoid specifying long messages outside the exception class
 
   # Redundant rules with ruff-format:
   "E111",   # Indentation of a non-multiple of 4 spaces

@@ -180,3 +180,35 @@ parallel = true
 branch = true
 timid = false
 source = ["src"]
+
+[tool.poe.tasks.precommit]
+cmd = "pre-commit install"
+help = "install pre-commit hooks"
+
+[tool.poe.tasks.lint]
+cmd = "pre-commit run --all-files"
+help = "Run all project linters (via pre-commit)"
+
+[tool.poe.tasks.ruff]
+cmd = "ruff check --fix ."
+help = "Run ruff linter, with automatic issue fixing"
+
+[tool.poe.tasks.ruff-format]
+cmd = "ruff format ."
+help = "Run ruff formatter"
+
+[tool.poe.tasks.test]
+cmd = "pytest -v --failed-first"
+help = "Run pytest tests"
+
+[tool.poe.tasks.retest]
+cmd = "pytest -v --last-failed"
+help = "Run previously failed tests using pytest"
+
+[tool.poe.tasks.test-nocov]
+cmd = "pytest -v --no-cov --failed-first"
+help = "Run pytest tests without coverage"
+
+[tool.poe.tasks.retest-nocov]
+cmd = "pytest -v --no-cov --last-failed"
+help = "Run previously failed tests using pytest without coverage"

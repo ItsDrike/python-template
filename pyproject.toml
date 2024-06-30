@@ -148,3 +148,35 @@ reportUnnecessaryContains = "error"
 reportUnnecessaryTypeIgnoreComment = "error"
 reportImplicitOverride = "error"
 reportShadowedImports = "error"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "--strict-markers --cov --no-cov-on-fail"
+
+[tool.coverage.report]
+precision = 2
+fail_under = 20
+show_missing = true
+skip_covered = false
+skip_empty = false
+sort = "cover"
+exclude_lines = [
+  "\\#\\s*pragma: no cover",
+  "^\\s*if (typing\\.)?TYPE_CHECKING:",
+  "^\\s*@(abc\\.)?abstractmethod",
+  "^\\s*@(typing\\.)?overload",
+  "^\\s*def __repr__\\(",
+  "^\\s*class .*\\bProtocol\\):",
+  "^\\s*raise NotImplementedError",
+  "^\\s*return NotImplemented",
+  "^\\s*\\.\\.\\.",
+]
+
+[tool.coverage.run]
+relative_files = true
+parallel = true
+branch = true
+timid = false
+source = ["src"]

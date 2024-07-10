@@ -21,6 +21,20 @@ test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypo
 trio = ["trio (>=0.23)"]
 
 [[package]]
+name = "basedpyright"
+version = "1.13.3"
+description = "static type checking for Python (but based)"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "basedpyright-1.13.3-py3-none-any.whl", hash = "sha256:3162c5a5f4fc99f9d53d76cbd8e24d31ad4b28b4fb26a58ab8be6e8b634c99a7"},
+    {file = "basedpyright-1.13.3.tar.gz", hash = "sha256:728d7098250db8d18bc4b48df8f93dfd9c79d155c3c99d41256a6caa6a21232e"},
+]
+
+[package.dependencies]
+nodejs-wheel-binaries = ">=20.13.1"
+
+[[package]]
 name = "certifi"
 version = "2024.6.2"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -248,6 +262,22 @@ files = [
 ]
 
 [[package]]
+name = "nodejs-wheel-binaries"
+version = "20.15.1"
+description = "unoffical Node.js package"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "nodejs_wheel_binaries-20.15.1-py2.py3-none-macosx_10_15_x86_64.whl", hash = "sha256:a04537555f59e53021f8a2b07fa7aaac29d7793b7fae7fbf561bf9a859f4c67a"},
+    {file = "nodejs_wheel_binaries-20.15.1-py2.py3-none-macosx_11_0_arm64.whl", hash = "sha256:b5ff04efa56a3fcd1fd09b30f5236c12bd84c10fcb222f3c0e04e1d497342b70"},
+    {file = "nodejs_wheel_binaries-20.15.1-py2.py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:29c3e172e3fde3c13e7509312c81700736304dbd250745d87f00e7506065f3a5"},
+    {file = "nodejs_wheel_binaries-20.15.1-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9740f7456a43cb09521a1ac93a4355dc8282c41420f2d61ff631a01f39e2aa18"},
+    {file = "nodejs_wheel_binaries-20.15.1-py2.py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:bf5e239676efabb2fbaeff2f36d0bad8e2379f260ef44e13ef2151d037e40af3"},
+    {file = "nodejs_wheel_binaries-20.15.1-py2.py3-none-win_amd64.whl", hash = "sha256:624936171b1aa2e1cc6d1718b1caa089e943b54df16568fa2f4576d145ac279a"},
+    {file = "nodejs_wheel_binaries-20.15.1.tar.gz", hash = "sha256:b2f25b4f0e9a827ae1af8218ab13a385e279c236faf7b7c821e969bb8f6b25e8"},
+]
+
+[[package]]
 name = "packaging"
 version = "24.1"
 description = "Core utilities for Python packages"
@@ -335,24 +365,6 @@ identify = ">=1.0.0"
 nodeenv = ">=0.11.1"
 pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
-
-[[package]]
-name = "pyright"
-version = "1.1.369"
-description = "Command line wrapper for pyright"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "pyright-1.1.369-py3-none-any.whl", hash = "sha256:06d5167a8d7be62523ced0265c5d2f1e022e110caf57a25d92f50fb2d07bcda0"},
-    {file = "pyright-1.1.369.tar.gz", hash = "sha256:ad290710072d021e213b98cc7a2f90ae3a48609ef5b978f749346d1a47eb9af8"},
-]
-
-[package.dependencies]
-nodeenv = ">=1.6.0"
-
-[package.extras]
-all = ["twine (>=3.4.1)"]
-dev = ["twine (>=3.4.1)"]
 
 [[package]]
 name = "pytest"
@@ -570,4 +582,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "334a7105baa770bfd69d0391602995e317ccc0faa3d34539acbf7e9aa5355fee"
+content-hash = "0201fdc3d3cb37b96f743109c61ab1a08e353bbe168de410418208199ae1a345"

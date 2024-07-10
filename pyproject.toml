@@ -17,7 +17,7 @@ poethepoet = "^0.25.0"
 [tool.poetry.group.lint.dependencies]
 ruff = "^0.3.2"
 pre-commit = "^3.6.2"
-pyright = "^1.1.359"
+basedpyright = "^1.13.3"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.1.1"
@@ -133,6 +133,7 @@ line-ending = "lf"
 
 [tool.pyright]
 pythonVersion = "3.11"
+typeCheckingMode = "standard"
 
 reportUntypedFunctionDecorator = "error"
 reportUntypedClassDecorator = "error"
@@ -201,6 +202,10 @@ help = "Run ruff formatter"
 [tool.poe.tasks.test]
 cmd = "pytest -v --failed-first"
 help = "Run pytest tests"
+
+[tool.poe.tasks.pyright]
+cmd = "basedpyright ."
+help = "Run BasedPyright type-checker"
 
 [tool.poe.tasks.retest]
 cmd = "pytest -v --last-failed"

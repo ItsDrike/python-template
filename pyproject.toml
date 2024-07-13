@@ -124,6 +124,9 @@ max-statements = 250
   "D",    # docstrings
   "S101", # Use of assert
 ]
+".github/scripts/**.py" = [
+  "INP001", # Implicit namespace package
+]
 
 [tool.ruff.format]
 line-ending = "lf"

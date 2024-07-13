@@ -204,7 +204,7 @@ cmd = "pytest -v --failed-first"
 help = "Run pytest tests"
 
 [tool.poe.tasks.pyright]
-cmd = "basedpyright ."
+cmd = "basedpyright --warnings ."
 help = "Run BasedPyright type-checker"
 
 [tool.poe.tasks.retest]

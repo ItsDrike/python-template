@@ -70,7 +70,7 @@ class UnpropagatingMockMixin(Generic[T_Mock]):
     _mock_sealed: bool
     _extract_mock_name: Callable[[], str]
 
-    def _get_child_mock(self, **kwargs) -> T_Mock:
+    def _get_child_mock(self, **kwargs: object) -> T_Mock:
         """Make :attr:`.child_mock_type`` instances instead of instances of the same class.
 
         By default, this method creates a new mock instance of the same original class, and passes
@@ -89,7 +89,7 @@ class UnpropagatingMockMixin(Generic[T_Mock]):
         return self.child_mock_type(**kwargs)
 
 
-class CustomMockMixin(UnpropagatingMockMixin):
+class CustomMockMixin(UnpropagatingMockMixin[T_Mock], Generic[T_Mock]):
     """Provides common functionality for our custom mock types.
 
     * Stops propagation of same ``spec_set`` restricted mock in child mocks
@@ -99,7 +99,7 @@ class CustomMockMixin(UnpropagatingMockMixin):
 
     spec_set = None
 
-    def __init__(self, **kwargs):
+    def __init__(self, **kwargs: object):
         if "spec_set" in kwargs:
             self.spec_set = kwargs.pop("spec_set")
-        super().__init__(spec_set=self.spec_set, **kwargs)  # type: ignore # Mixin class, this __init__ is valid
+        super().__init__(spec_set=self.spec_set, **kwargs)  # pyright: ignore[reportCallIssue]  # Mixin class, this __init__ is valid

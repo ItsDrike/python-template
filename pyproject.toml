@@ -67,7 +67,7 @@ ignore = [
   "D413", # Missing blank line after last section
   "D414", # Section has no content
   "D416", # Section name should end with a colon
-  "D417", # Missing argument descrition in the docstring
+  "D417", # Missing argument description in the docstring
 
   "ANN101", # Missing type annotation for self in method
   "ANN102", # Missing type annotation for cls in classmethod

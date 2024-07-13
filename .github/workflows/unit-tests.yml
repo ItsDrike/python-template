@@ -69,6 +69,14 @@ jobs:
           coverage xml
           coverage report
 
+      - name: Test
+        run: echo "${{secrets.CC_TEST_REPORTER_ID}}"
+
+      - name: Test 2
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        run: echo "$CC_TEST_REPORTER_ID"
+
       - name: Upload coverage to codeclimate
         uses: paambaati/codeclimate-action@v8.0.0
         env:

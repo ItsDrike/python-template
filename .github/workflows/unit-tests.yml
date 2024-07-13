@@ -27,7 +27,7 @@ jobs:
       - name: Run pytest
         shell: bash
         run: |
-          poetry run task test
+          poetry run poe test
 
           python .github/scripts/normalize_coverage.py
           mv .coverage .coverage.${{ matrix.platform }}.${{ matrix.python-version }}

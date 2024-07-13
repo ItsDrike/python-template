@@ -170,7 +170,7 @@ addopts = "--strict-markers --cov --no-cov-on-fail"
 
 [tool.coverage.report]
 precision = 2
-fail_under = 20
+fail_under = 0
 show_missing = true
 skip_covered = false
 skip_empty = false

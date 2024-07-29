@@ -16,7 +16,7 @@ poethepoet = "^0.25.0"
 
 [tool.poetry.group.lint.dependencies]
 ruff = "^0.3.2"
-pre-commit = "^3.6.2"
+pre-commit = "^3.8.0"
 basedpyright = "^1.13.3"
 
 [tool.poetry.group.test.dependencies]

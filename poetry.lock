@@ -22,13 +22,13 @@ trio = ["trio (>=0.23)"]
 
 [[package]]
 name = "basedpyright"
-version = "1.13.3"
+version = "1.15.2"
 description = "static type checking for Python (but based)"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "basedpyright-1.13.3-py3-none-any.whl", hash = "sha256:3162c5a5f4fc99f9d53d76cbd8e24d31ad4b28b4fb26a58ab8be6e8b634c99a7"},
-    {file = "basedpyright-1.13.3.tar.gz", hash = "sha256:728d7098250db8d18bc4b48df8f93dfd9c79d155c3c99d41256a6caa6a21232e"},
+    {file = "basedpyright-1.15.2-py3-none-any.whl", hash = "sha256:78879dee4fb334da0f78e13de93761ee654ff6b7fe32df454f179772bc37d59f"},
+    {file = "basedpyright-1.15.2.tar.gz", hash = "sha256:c07f4ad7d5b2a2d3194ecdfa311b7a58da8670144873ff54f0d2d40a5d1b5944"},
 ]
 
 [package.dependencies]
@@ -582,4 +582,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "0201fdc3d3cb37b96f743109c61ab1a08e353bbe168de410418208199ae1a345"
+content-hash = "9c61e11355464cc4f5d11beb101292557d87c32bc4643aff3abeaa5b881005ae"
